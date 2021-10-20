@@ -1,0 +1,15 @@
+{
+    "name": "tui-ngrx-forms-adapter",
+    "version": "1.0.0",
+    "peerDependencies": {
+        "@angular/core": ">=9.0.0",
+        "ngrx-form": ">=1.0.0"
+    },
+    "description": "Adapter for Taiga Ui form controls to use with ngrx-forms",
+    "keywords": [],
+    "license": "Apache-2.0",
+    "authors": [],
+    "repository": "",
+    "bugs": "",
+    "homepage": ""
+}
