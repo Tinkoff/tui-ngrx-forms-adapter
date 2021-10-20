@@ -7,4 +7,4 @@ An Angular directive that allows to use [ngrx-forms](https://github.com/MrWolfZ/
 
 ## How to use
 
-Just import TuiNgrxFormsAdapterModule into your module. The directive will be applyed automatically via "[ngrxFormControlState]" selector.
+Just import `TuiNgrxFormsAdapterModule` into your module. The directive will be applyed automatically via "[ngrxFormControlState]" selector.
