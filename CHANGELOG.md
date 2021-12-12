@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/TinkoffCreditSystems/tui-ngrx-forms-adapter/compare/v1.1.0...v1.1.1) (2021-12-12)
+
+### Features
+
+-   **all:** add homepage ([9f11da1](https://github.com/TinkoffCreditSystems/tui-ngrx-forms-adapter/commit/9f11da133795ee1072139b25b9255a63463e3e5b))
+
 ## 1.1.0 (2021-12-12)
 
 ### Features
