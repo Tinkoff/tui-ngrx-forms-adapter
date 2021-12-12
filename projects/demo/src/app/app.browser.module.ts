@@ -7,10 +7,8 @@ import {StoreModule} from '@ngrx/store';
 import {TuiButtonModule, TuiErrorModule} from '@taiga-ui/core';
 import {TuiFieldErrorModule, TuiInputModule} from '@taiga-ui/kit';
 import {NgrxFormsModule} from 'ngrx-forms';
-import {TuiNgrxFormsAdapterModule} from '../../../tui-ngrx-forms-adapter/src/module';
+import {TuiNgrxFormsAdapterModule} from 'tui-ngrx-forms-adapter';
 import {AppComponent} from './app.component';
-import {AppRoutingModule} from './app.routes';
-import {StaticModule} from './modules/static/static.module';
 import {storeReducer} from './store/store.reducer';
 
 @NgModule({
@@ -19,8 +17,6 @@ import {storeReducer} from './store/store.reducer';
         BrowserModule.withServerTransition({
             appId: 'demo',
         }),
-        AppRoutingModule,
-        StaticModule,
         StoreModule.forRoot({store: storeReducer}),
         TuiInputModule,
         TuiButtonModule,

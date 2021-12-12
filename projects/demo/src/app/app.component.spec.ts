@@ -5,7 +5,7 @@ import {Store} from '@ngrx/store';
 import {MockStore, MockStoreConfig, provideMockStore} from '@ngrx/store/testing';
 import {TuiInputComponent} from '@taiga-ui/kit';
 import {createFormGroupState} from 'ngrx-forms';
-import {TuiNgrxFormsAdapterDirective} from '../../../tui-ngrx-forms-adapter/src/directives/tui-ngrx-forms-adapter.directive';
+import {TuiNgrxFormsAdapterDirective} from 'tui-ngrx-forms-adapter';
 import {AppBrowserModule} from './app.browser.module';
 import {AppComponent} from './app.component';
 
