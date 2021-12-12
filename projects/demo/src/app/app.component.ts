@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, ViewChild} from '@angular/core';
 import {Store} from '@ngrx/store';
 import {DisableAction, EnableAction, MarkAsTouchedAction, ResetAction} from 'ngrx-forms';
-import {TuiNgrxFormsAdapterDirective} from '../../../tui-ngrx-forms-adapter/src/directives/tui-ngrx-forms-adapter.directive';
+import {TuiNgrxFormsAdapterDirective} from 'tui-ngrx-forms-adapter';
 import {formId} from './common';
 import {selectFormState} from './store';
 
