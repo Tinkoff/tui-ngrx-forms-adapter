@@ -1,6 +1,6 @@
 {
     "name": "@tinkoff/tui-ngrx-forms-adapter",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
@@ -41,7 +41,7 @@
     "contributors": [],
     "repository": "",
     "bugs": "",
-    "homepage": "",
+    "homepage": "https://github.com/TinkoffCreditSystems/tui-ngrx-forms-adapter",
     "schematics": "./schematics/collection.json",
     "dependencies": {
         "@angular/animations": "^10.2.5",
