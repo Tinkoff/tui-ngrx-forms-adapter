@@ -4,8 +4,8 @@ import {By} from '@angular/platform-browser';
 import {Store} from '@ngrx/store';
 import {MockStore, MockStoreConfig, provideMockStore} from '@ngrx/store/testing';
 import {TuiInputComponent} from '@taiga-ui/kit';
-import {TuiNgrxFormsAdapterDirective} from '@tinkoff/tui-ngrx-forms-adapter';
 import {createFormGroupState} from 'ngrx-forms';
+import {TuiNgrxFormsAdapterDirective} from 'tui-ngrx-forms-adapter';
 import {AppBrowserModule} from './app.browser.module';
 import {AppComponent} from './app.component';
 
