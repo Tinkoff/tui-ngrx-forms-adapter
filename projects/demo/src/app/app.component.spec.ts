@@ -1,22 +1,52 @@
-import {TestBed} from '@angular/core/testing';
-import {Router} from '@angular/router';
+import {DebugElement} from '@angular/core';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {By} from '@angular/platform-browser';
+import {Store} from '@ngrx/store';
+import {MockStore, MockStoreConfig, provideMockStore} from '@ngrx/store/testing';
+import {TuiInputComponent} from '@taiga-ui/kit';
+import {createFormGroupState} from 'ngrx-forms';
+import {TuiNgrxFormsAdapterDirective} from 'tui-ngrx-forms-adapter';
 import {AppBrowserModule} from './app.browser.module';
 import {AppComponent} from './app.component';
 
-describe('Test dummy', () => {
-    let component: AppComponent;
+describe('AppComponent', () => {
+    let fixture: ComponentFixture<AppComponent>;
+    let inputElem: DebugElement;
+    let adapterDirective: TuiNgrxFormsAdapterDirective<string>;
+    let storeMock: MockStore;
+
+    const initialState = {
+        store: {
+            formState: createFormGroupState('test', {
+                textInput: 'hello',
+            }),
+        },
+    };
 
     beforeEach(() => {
         TestBed.configureTestingModule({
             imports: [AppBrowserModule],
+            providers: [provideMockStore({initialState} as MockStoreConfig<any>)],
         });
 
-        component = TestBed.createComponent(AppComponent);
+        fixture = TestBed.createComponent(AppComponent);
+        fixture.detectChanges();
     });
 
-    it('AppComponent compiles properly', () => {
-        TestBed.inject(Router).navigate(['/lazy']);
+    it('Если в сторе есть состояние формы, то инитится директива TuiNgrxFormsAdapterDirective', () => {
+        // arrange
+        storeMock = TestBed.inject(Store) as MockStore;
 
-        expect(component).toBeTruthy();
+        storeMock.setState({
+            ...initialState,
+        });
+
+        fixture.detectChanges();
+
+        fixture.detectChanges();
+        inputElem = fixture.debugElement.query(By.directive(TuiInputComponent));
+        adapterDirective = inputElem.injector.get(TuiNgrxFormsAdapterDirective);
+
+        expect(adapterDirective).toBeTruthy();
     });
 });

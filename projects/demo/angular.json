@@ -20,7 +20,12 @@
                         "tsConfig": "tsconfig.demo.json",
                         "aot": false,
                         "assets": ["src/favicon.ico"],
-                        "styles": ["src/styles.css"],
+                        "styles": [
+                            "src/styles.css",
+                            "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
+                            "node_modules/@taiga-ui/core/styles/theme/variables.less",
+                            "node_modules/@taiga-ui/core/styles/theme/wrapper.less"
+                        ],
                         "scripts": []
                     },
                     "configurations": {

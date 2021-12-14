@@ -1,10 +1,63 @@
-<blockquote>
-    Import from your library in this demo project as if you were using it as an NPM package
-</blockquote>
-<blockquote>
-    <a routerLink="." style="margin-right: 16px">Static component</a>
-    <a routerLink="/lazy">Lazy component</a>
-</blockquote>
-<blockquote>
-    <router-outlet></router-outlet>
-</blockquote>
+<div class="tui-container wrapper">
+    <h1 class="tui-text_h1">Ngrx-forms view adapter for Taiga UI</h1>
+    <form *ngIf="formGroupState$ | async as formGroup" [ngrxFormState]="formGroup">
+        <tui-input
+            [ngrxFormControlState]="formGroup.controls.textInput"
+            #textAdapter="adapter"
+            >Text input</tui-input
+        >
+        <tui-field-error [formControl]="textAdapter.control"></tui-field-error>
+
+        <div class="buttons tui-space_top-4">
+            <button
+                tuiButton
+                type="button"
+                class="tui-space_right-2"
+                size="m"
+                (click)="disable()"
+            >
+                Disable
+            </button>
+            <button
+                tuiButton
+                type="button"
+                class="tui-space_right-2"
+                size="m"
+                (click)="enable()"
+            >
+                Enable
+            </button>
+            <button
+                tuiButton
+                type="button"
+                class="tui-space_right-2"
+                size="m"
+                (click)="reset()"
+            >
+                Reset
+            </button>
+            <button
+                tuiButton
+                type="button"
+                class="tui-space_right-2"
+                size="m"
+                (click)="textAdapter.markControlAsTouched()"
+            >
+                Mark as touched
+            </button>
+            <button
+                tuiButton
+                type="button"
+                class="tui-space_right-2"
+                size="m"
+                (click)="textAdapter.setControlStateValue('world')"
+            >
+                Change value
+            </button>
+        </div>
+        <div class="state tui-space_top-3">
+            <h3 class="tui-text_h3">Form group controls state:</h3>
+            <pre>{{ formGroup.controls | json }}</pre>
+        </div>
+    </form>
+</div>

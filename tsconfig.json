@@ -5,7 +5,7 @@
         "outDir": "./dist/out-tsc",
         "sourceMap": true,
         "declaration": false,
-        "module": "esnext",
+        "module": "es2020",
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "importHelpers": true,
@@ -17,6 +17,8 @@
         "target": "es2015",
         "typeRoots": ["node_modules/@types"],
         "lib": ["es2018", "dom"],
-        "paths": {}
+        "paths": {
+            "tui-ngrx-forms-adapter": ["projects/tui-ngrx-forms-adapter/src/public-api"]
+        }
     }
 }

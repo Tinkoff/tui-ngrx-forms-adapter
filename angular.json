@@ -22,7 +22,11 @@
                         "tsConfig": "tsconfig.json",
                         "aot": false,
                         "assets": ["projects/demo/src/favicon.ico"],
-                        "styles": ["projects/demo/src/styles.css"],
+                        "styles": [
+                            "projects/demo/src/styles.css",
+                            "node_modules/@taiga-ui/core/styles/taiga-ui-global.less",
+                            "node_modules/@taiga-ui/core/styles/taiga-ui-theme.less"
+                        ],
                         "scripts": []
                     },
                     "configurations": {
@@ -36,7 +40,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
                             "namedChunks": false,
                             "aot": true,
                             "extractLicenses": true,
@@ -117,6 +120,40 @@
                     },
                     "configurations": {
                         "production": {}
+                    }
+                }
+            }
+        },
+        "tui-ngrx-forms-adapter": {
+            "projectType": "library",
+            "root": "projects/tui-ngrx-forms-adapter",
+            "sourceRoot": "projects/tui-ngrx-forms-adapter/src",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:ng-packagr",
+                    "options": {
+                        "tsConfig": "projects/tui-ngrx-forms-adapter/tsconfig.lib.json",
+                        "project": "projects/tui-ngrx-forms-adapter/ng-package.json"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/tui-ngrx-forms-adapter/src/test.ts",
+                        "tsConfig": "projects/tui-ngrx-forms-adapter/tsconfig.spec.json",
+                        "karmaConfig": "projects/tui-ngrx-forms-adapter/karma.conf.js",
+                        "codeCoverage": true,
+                        "browsers": "ChromeHeadless"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/tui-ngrx-forms-adapter/tsconfig.lib.json",
+                            "projects/tui-ngrx-forms-adapter/tsconfig.spec.json"
+                        ],
+                        "exclude": ["**/node_modules/**"]
                     }
                 }
             }
