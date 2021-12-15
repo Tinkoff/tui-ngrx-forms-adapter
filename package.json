@@ -1,6 +1,6 @@
 {
-    "name": "tui-ngrx-forms-adapter",
-    "version": "1.0.3",
+    "name": "@tinkoff/tui-ngrx-forms-adapter",
+    "version": "1.0.1",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
