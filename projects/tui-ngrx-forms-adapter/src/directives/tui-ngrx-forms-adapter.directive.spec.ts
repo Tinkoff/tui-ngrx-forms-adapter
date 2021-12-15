@@ -1,4 +1,4 @@
-import {Component, DebugElement} from '@angular/core';
+import {ChangeDetectionStrategy, Component, DebugElement} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {By} from '@angular/platform-browser';
@@ -38,9 +38,12 @@ describe('NgrxTuiControlViewAdapterDirective', () => {
             </tui-input>
             <tui-field-error [formControl]="textAdapter.control"></tui-field-error>
         `,
+        changeDetection: ChangeDetectionStrategy.OnPush,
     })
     class TestedComponentWrapper {
-        formControl$ = formControlState$;
+        formControl$ = new BehaviorSubject<FormControlState<string>>(
+            createFormControlState<string>('test', ''),
+        );
     }
 
     beforeEach(() => {
@@ -59,10 +62,8 @@ describe('NgrxTuiControlViewAdapterDirective', () => {
     });
 
     beforeEach(() => {
-        formControlState$ = new BehaviorSubject<FormControlState<string>>(
-            createFormControlState<string>('test', ''),
-        );
         fixture = TestBed.createComponent(TestedComponentWrapper);
+        formControlState$ = fixture.componentInstance.formControl$;
         inputElem = fixture.debugElement.query(By.directive(TuiInputComponent));
         inputComponent = inputElem.componentInstance;
         adapterDirective = inputElem.injector.get(TuiNgrxFormsAdapterDirective);
