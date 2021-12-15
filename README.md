@@ -14,4 +14,6 @@ Use `npm i @tinkoff/tui-ngrx-forms-adapter`
 
 Just import `TuiNgrxFormsAdapterModule` into your module. The directive will be applied automatically via `[ngrxFormControlState]` selector.
 
+## Demo
+
 You can play with it in our [demo](https://stackblitz.com/github/TinkoffCreditSystems/tui-ngrx-forms-adapter/tree/main/projects/demo).
