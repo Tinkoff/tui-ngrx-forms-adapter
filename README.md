@@ -6,8 +6,12 @@
 
 An Angular directive that allows to use [ngrx-forms](https://github.com/MrWolfZ/ngrx-forms) with form controls from [Taiga UI](https://github.com/TinkoffCreditSystems/taiga-ui).
 
+## Installation
+
+Use `npm i @tinkoff/tui-ngrx-forms-adapter`
+
 ## How to use
 
-Just import `TuiNgrxFormsAdapterModule` into your module. The directive will be applyed automatically via "[ngrxFormControlState]" selector.
+Just import `TuiNgrxFormsAdapterModule` into your module. The directive will be applied automatically via `[ngrxFormControlState]` selector.
 
-You can see some examples of usage in our [demo](https://stackblitz.com/github/TinkoffCreditSystems/tui-ngrx-forms-adapter/tree/main/projects/demo).
+You can play with it in our [demo](https://stackblitz.com/github/TinkoffCreditSystems/tui-ngrx-forms-adapter/tree/main/projects/demo).
