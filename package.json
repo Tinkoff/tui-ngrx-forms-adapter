@@ -41,7 +41,7 @@
     "contributors": [],
     "repository": "",
     "bugs": "",
-    "homepage": "https://github.com/TinkoffCreditSystems/tui-ngrx-forms-adapter",
+    "homepage": "https://github.com/Tinkoff/tui-ngrx-forms-adapter",
     "schematics": "./schematics/collection.json",
     "dependencies": {
         "@angular/animations": "^11.2.14",

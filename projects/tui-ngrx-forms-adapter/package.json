@@ -9,10 +9,10 @@
     "keywords": ["angular", "ng", "ngrx", "ngrx-forms", "taiga-ui"],
     "license": "Apache-2.0",
     "authors": ["Makar Loshakov <m.loshakov@tinkoff.ru>"],
-    "repository": "https://github.com/TinkoffCreditSystems/tui-ngrx-forms-adapter",
+    "repository": "https://github.com/Tinkoff/tui-ngrx-forms-adapter",
     "bugs": "",
     "dependencies": {
         "tslib": "^2.0.0"
     },
-    "homepage": "https://github.com/TinkoffCreditSystems/tui-ngrx-forms-adapter#README"
+    "homepage": "https://github.com/Tinkoff/tui-ngrx-forms-adapter#README"
 }
