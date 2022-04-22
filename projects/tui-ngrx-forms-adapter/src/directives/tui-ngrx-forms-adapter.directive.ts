@@ -28,7 +28,7 @@ export class TuiNgrxFormsAdapterDirective<T>
     implements FormViewAdapter, OnInit
 {
     private tuiControl!: AbstractTuiNullableControl<T>;
-    private onChangeCallback!: (val: T | null) => void;
+    private onChangeCallback!: (val: T | unknown) => void;
     private onTouchedCallback!: () => void;
 
     readonly control = new FormControl();
@@ -61,7 +61,7 @@ export class TuiNgrxFormsAdapterDirective<T>
         this.tuiControl.writeValue(value);
     }
 
-    setOnChangeCallback(fn: (value: T | null) => void) {
+    setOnChangeCallback(fn: (value: T | unknown) => void) {
         this.onChangeCallback = this.generateOnChangeCallback(fn);
         this.tuiControl.registerOnChange(this.onChangeCallback);
     }
@@ -97,9 +97,9 @@ export class TuiNgrxFormsAdapterDirective<T>
     }
 
     private generateOnChangeCallback(
-        fn: (value: T | null) => void,
-    ): (val: T | null) => void {
-        return (val: T | null) => {
+        fn: (value: T | unknown) => void,
+    ): (val: T | unknown) => void {
+        return (val: T | unknown) => {
             this.control.setValue(val);
             fn(val);
         };
