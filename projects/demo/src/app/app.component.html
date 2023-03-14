@@ -1,63 +1,99 @@
-<div class="tui-container wrapper">
-    <h1 class="tui-text_h1">Ngrx-forms view adapter for Taiga UI</h1>
-    <form *ngIf="formGroupState$ | async as formGroup" [ngrxFormState]="formGroup">
-        <tui-input
-            [ngrxFormControlState]="formGroup.controls.textInput"
-            #textAdapter="adapter"
-            >Text input</tui-input
+<tui-root>
+    <div class="tui-container wrapper">
+        <h1 class="tui-text_h1">Ngrx-forms view adapter for Taiga UI</h1>
+        <form
+            *ngIf="formGroupState$ | async as formGroup"
+            style="display: flex; flex-direction: column"
+            [ngrxFormState]="formGroup"
         >
-        <tui-field-error [formControl]="textAdapter.control"></tui-field-error>
+            <tui-input
+                [ngrxFormControlState]="formGroup.controls.textInput"
+                #textAdapter="adapter"
+                >Text input</tui-input
+            >
+            <tui-field-error [formControl]="textAdapter.control"></tui-field-error>
 
-        <div class="buttons tui-space_top-4">
-            <button
-                tuiButton
-                type="button"
-                class="tui-space_right-2"
-                size="m"
-                (click)="disable()"
-            >
-                Disable
-            </button>
-            <button
-                tuiButton
-                type="button"
-                class="tui-space_right-2"
-                size="m"
-                (click)="enable()"
-            >
-                Enable
-            </button>
-            <button
-                tuiButton
-                type="button"
-                class="tui-space_right-2"
-                size="m"
-                (click)="reset()"
-            >
-                Reset
-            </button>
-            <button
-                tuiButton
-                type="button"
-                class="tui-space_right-2"
-                size="m"
-                (click)="textAdapter.markControlAsTouched()"
-            >
-                Mark as touched
-            </button>
-            <button
-                tuiButton
-                type="button"
-                class="tui-space_right-2"
-                size="m"
-                (click)="textAdapter.setControlStateValue('world')"
-            >
-                Change value
-            </button>
-        </div>
-        <div class="state tui-space_top-3">
-            <h3 class="tui-text_h3">Form group controls state:</h3>
-            <pre>{{ formGroup.controls | json }}</pre>
-        </div>
-    </form>
-</div>
+            <div class="buttons tui-space_top-4">
+                <button
+                    tuiButton
+                    type="button"
+                    class="tui-space_right-2"
+                    size="m"
+                    (click)="disable()"
+                >
+                    Disable
+                </button>
+                <button
+                    tuiButton
+                    type="button"
+                    class="tui-space_right-2"
+                    size="m"
+                    (click)="enable()"
+                >
+                    Enable
+                </button>
+                <button
+                    tuiButton
+                    type="button"
+                    class="tui-space_right-2"
+                    size="m"
+                    (click)="reset()"
+                >
+                    Reset
+                </button>
+                <button
+                    tuiButton
+                    type="button"
+                    class="tui-space_right-2"
+                    size="m"
+                    (click)="textAdapter.markControlAsTouched()"
+                >
+                    Mark as touched from adapter
+                </button>
+                <button
+                    tuiButton
+                    type="button"
+                    class="tui-space_right-2"
+                    size="m"
+                    (click)="markAsTouched()"
+                >
+                    Mark as touched from store
+                </button>
+                <button
+                    tuiButton
+                    type="button"
+                    class="tui-space_right-2"
+                    size="m"
+                    (click)="textAdapter.control.setValue('world')"
+                >
+                    Change value form adapter
+                </button>
+                <button
+                    tuiButton
+                    type="button"
+                    class="tui-space_right-2"
+                    size="m"
+                    (click)="changeValueFromStore()"
+                >
+                    Change value from store
+                </button>
+            </div>
+            <div class="state tui-space_top-3">
+                <h3 class="tui-text_h3">Form group controls state:</h3>
+                <pre>{{ formGroup.controls | json }}</pre>
+            </div>
+        </form>
+    </div>
+    <ng-container ngProjectAs="tuiOverPopups">
+        <!-- контент над попапами кита -->
+    </ng-container>
+    <ng-container ngProjectAs="tuiOverNotifications">
+        <!-- контент над нотификациями кита -->
+    </ng-container>
+    <ng-container ngProjectAs="tuiOverPortals">
+        <!-- контент над выпадашками кита -->
+    </ng-container>
+    <ng-container ngProjectAs="tuiOverHints">
+        <!-- контент над хинтами кита -->
+    </ng-container>
+</tui-root>
