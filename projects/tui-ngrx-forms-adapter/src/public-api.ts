@@ -3,4 +3,4 @@
  */
 
 export * from './module';
-export * from './directives/tui-ngrx-forms-adapter.directive';
+export * from './directive/tui-ngrx-forms-adapter.directive';

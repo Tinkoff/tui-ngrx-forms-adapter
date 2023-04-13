@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {TuiNgrxFormsAdapterDirective} from './directives/tui-ngrx-forms-adapter.directive';
+import {TuiNgrxFormsAdapterDirective} from './directive/tui-ngrx-forms-adapter.directive';
 
 @NgModule({
     declarations: [TuiNgrxFormsAdapterDirective],
