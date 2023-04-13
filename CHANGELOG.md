@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Tinkoff/tui-ngrx-forms-adapter/compare/v1.3.0...v1.4.0) (2023-04-13)
+
+### Features
+
+-   **all:** code refactoring ([e600ef3](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/e600ef310e74f9cd249823eb2425ca54fba6e92b))
+-   **all:** fix emo ([21f121b](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/21f121b1d7833be98aa46dabf9c28a1d936b72c9))
+-   **all:** upd version ([baaa949](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/baaa949f663932d678bfdeb6a477397e920928e1))
+
 ## [1.3.0](https://github.com/Tinkoff/tui-ngrx-forms-adapter/compare/v1.2.1...v1.3.0) (2022-04-22)
 
 ### Features
