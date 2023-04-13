@@ -1,9 +1,9 @@
 {
     "name": "@tinkoff/tui-ngrx-forms-adapter",
-    "version": "1.4.0",
+    "version": "1.6.0",
     "peerDependencies": {
         "@angular/core": ">=9.0.0",
-        "ngrx-form": ">=1.0.0"
+        "ngrx-forms": ">=1.0.0"
     },
     "description": "Adapter for Taiga Ui form controls to use with ngrx-forms",
     "keywords": ["angular", "ng", "ngrx", "ngrx-forms", "taiga-ui"],
