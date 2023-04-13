@@ -4,7 +4,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {By} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MockStore, provideMockStore} from '@ngrx/store/testing';
-import {TuiFieldErrorModule, TuiInputComponent, TuiInputModule} from '@taiga-ui/kit';
+import {TuiInputComponent, TuiInputModule} from '@taiga-ui/kit';
 import {TuiNgrxFormsAdapterDirective} from '@tinkoff/tui-ngrx-forms-adapter';
 import {cold} from 'jasmine-marbles';
 import {
@@ -35,6 +35,7 @@ describe('NgrxTuiControlViewAdapterDirective', () => {
         template: `
             <tui-input [ngrxFormControlState]="formControl$ | async">
                 test input label
+                <input tuiTextfield />
             </tui-input>
         `,
         changeDetection: ChangeDetectionStrategy.OnPush,
@@ -52,7 +53,6 @@ describe('NgrxTuiControlViewAdapterDirective', () => {
                 TuiInputModule,
                 NgrxFormsModule,
                 TuiNgrxFormsAdapterModule,
-                TuiFieldErrorModule,
                 FormsModule,
                 ReactiveFormsModule,
                 BrowserAnimationsModule,

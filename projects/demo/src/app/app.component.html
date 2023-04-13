@@ -1,4 +1,4 @@
-<div class="tui-container wrapper">
+<div class="wrapper">
     <h1 class="tui-text_h1">Ngrx-forms view adapter for Taiga UI</h1>
     <form
         *ngIf="formGroupState$ | async as formGroup"
@@ -8,11 +8,16 @@
         <tui-input
             [ngrxFormControlState]="formGroup.controls.textInput"
             #textAdapter="adapter"
-            >Text input</tui-input
         >
-        <tui-field-error [formControl]="textAdapter.control"></tui-field-error>
+            Text input
+            <input tuiTextfield />
+        </tui-input>
+        <tui-error
+            [formControl]="textAdapter.control"
+            [error]="[] | tuiFieldError | async"
+        ></tui-error>
 
-        <div class="buttons tui-space_top-4">
+        <div class="buttons">
             <button
                 tuiButton
                 type="button"
@@ -83,15 +88,3 @@
         </div>
     </form>
 </div>
-<ng-container ngProjectAs="tuiOverPopups">
-    <!-- контент над попапами кита -->
-</ng-container>
-<ng-container ngProjectAs="tuiOverNotifications">
-    <!-- контент над нотификациями кита -->
-</ng-container>
-<ng-container ngProjectAs="tuiOverPortals">
-    <!-- контент над выпадашками кита -->
-</ng-container>
-<ng-container ngProjectAs="tuiOverHints">
-    <!-- контент над хинтами кита -->
-</ng-container>
