@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/Tinkoff/tui-ngrx-forms-adapter/compare/v1.5.0...v2.0.0) (2023-04-13)
+
+### Bug Fixes
+
+-   **all:** fix demo package.json ([fcf88fe](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/fcf88fe140f009c0d3e1a9ce63050c7b1a4051d6))
+
 ## [1.5.0](https://github.com/Tinkoff/tui-ngrx-forms-adapter/compare/v1.4.0...v1.5.0) (2023-04-13)
 
 ### Features
