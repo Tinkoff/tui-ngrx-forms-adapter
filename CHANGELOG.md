@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Tinkoff/tui-ngrx-forms-adapter/compare/v1.4.0...v1.5.0) (2023-04-13)
+
+### Features
+
+-   **all:** release 1.4.0 ([5ab40f4](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/5ab40f427b0225d0e6b783446bfac372b24cbe0a))
+-   **all:** taiga 3 in demo ([76861ea](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/76861eadd89dccfbecfad5fbbfce803b2fa48cee))
+-   **all:** upd angular ([744ca5e](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/744ca5e73ead51035e24d830f3d5151414b1d100))
+-   **all:** upd express ([d91c9ee](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/d91c9eee4c6984145a2ec988d45754b5731c24c7))
+-   **all:** upd ng-mocks ([99d7d73](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/99d7d73baf26c4f829149b3e62314e14cf85731f))
+-   **all:** upd peer deps ([0c1331a](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/0c1331aae7a89f8e639bb6fe804f578ab741be23))
+
+### Bug Fixes
+
+-   **all:** fix build ([3209c01](https://github.com/Tinkoff/tui-ngrx-forms-adapter/commit/3209c0146c38eaa0dd9f68158e75d83fc2fe90af))
+
 ## [1.4.0](https://github.com/Tinkoff/tui-ngrx-forms-adapter/compare/v1.3.0...v1.4.0) (2023-04-13)
 
 ### Features
