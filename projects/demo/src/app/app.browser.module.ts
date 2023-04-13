@@ -1,4 +1,4 @@
-import {LocationStrategy, PathLocationStrategy} from '@angular/common';
+import {CommonModule, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
@@ -14,6 +14,7 @@ import {storeReducer} from './store/store.reducer';
 @NgModule({
     bootstrap: [AppComponent],
     imports: [
+        CommonModule,
         BrowserModule.withServerTransition({
             appId: 'demo',
         }),
