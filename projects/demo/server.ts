@@ -3,7 +3,7 @@
  */
 import '@angular/localize/init';
 import '@ng-web-apis/universal/mocks';
-import 'zone.js/dist/zone-node';
+import 'zone.js/node';
 
 import {APP_BASE_HREF} from '@angular/common';
 import {provideLocation, provideUserAgent} from '@ng-web-apis/universal';
