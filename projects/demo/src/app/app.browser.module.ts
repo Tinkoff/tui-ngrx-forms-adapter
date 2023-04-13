@@ -5,7 +5,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {StoreModule} from '@ngrx/store';
 import {TuiButtonModule, TuiErrorModule} from '@taiga-ui/core';
-import {TuiFieldErrorModule, TuiInputModule} from '@taiga-ui/kit';
+import {TuiFieldErrorPipeModule, TuiInputModule} from '@taiga-ui/kit';
 import {TuiNgrxFormsAdapterModule} from '@tinkoff/tui-ngrx-forms-adapter';
 import {NgrxFormsModule} from 'ngrx-forms';
 import {AppComponent} from './app.component';
@@ -21,7 +21,7 @@ import {storeReducer} from './store/store.reducer';
         TuiInputModule,
         TuiButtonModule,
         TuiErrorModule,
-        TuiFieldErrorModule,
+        TuiFieldErrorPipeModule,
         BrowserAnimationsModule,
         NgrxFormsModule,
         TuiNgrxFormsAdapterModule,

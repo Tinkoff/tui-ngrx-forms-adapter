@@ -16,6 +16,7 @@ import {selectFormState} from './store';
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
+    styleUrls: ['./app.component.less'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
