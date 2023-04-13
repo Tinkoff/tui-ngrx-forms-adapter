@@ -10,6 +10,10 @@ An Angular directive that allows to use [ngrx-forms](https://github.com/MrWolfZ/
 
 Use `npm i @tinkoff/tui-ngrx-forms-adapter`
 
+v1.x.x - View Engine
+
+v2+ - Ivy
+
 ## How to use
 
 Just import `TuiNgrxFormsAdapterModule` into your module. The directive will be applied automatically via `[ngrxFormControlState]` selector.
